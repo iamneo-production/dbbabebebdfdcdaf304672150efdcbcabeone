@@ -46,16 +46,25 @@ const ticTacToe = (element, index) => {
                 return;
             }
         }
-        
+
 
     // Your code to update the game state and check for a win
     // ...
+    if (!cells.includes('')) {
+        result.textContent = 'It\'s a draw!';
+        return;
+    }
+
 
     // Your code to display the current player's turn
     // ...
 
+    currentPlayer=currentPlayer==='X'?'O':'X';
+
     // Your code to handle button and cell interactions
     // ...
+
+    result.textContent=`CurrentPlayer`
 
     
 };
