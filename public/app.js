@@ -19,15 +19,27 @@ const ticTacToe = (element, index) => {
     // Your game logic here
     //check if the clicked cell is already occupied
     //or if the game is already won
-    if(cells[index]!=="|| result")
+    if(cells[index]!=="|| result.textContent!=="){
+        return;
+    }
+    //update the currrent cell with the current player symbol
+    cells[index]=currentPlayer;
+    element.textContent=currentPlayer;
+
 
     /*
     **Part 1: Winning Conditions (Add your code here)**
+
+    
 
     1. Implement the logic to check for winning conditions using the 'conditions' array.
     2. Display a winning message in the 'result' element when a player wins.
     3. Disable all buttons after a win.
     */
+    for(const condition of conditions){
+        const[a,b,c]=condition;
+        if(cells[a] && cells[a]===cells[b])
+    }
 
     // Your code to update the game state and check for a win
     // ...
@@ -37,6 +49,8 @@ const ticTacToe = (element, index) => {
 
     // Your code to handle button and cell interactions
     // ...
+
+    
 };
 
     /*
