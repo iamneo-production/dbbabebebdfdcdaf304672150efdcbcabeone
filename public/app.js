@@ -64,7 +64,7 @@ const ticTacToe = (element, index) => {
     // Your code to handle button and cell interactions
     // ...
 
-    result.textContent=`CurrentPlayer`
+    result.textContent=`CurrentPlayer:${currentPlayer}`;
 
     
 };
@@ -83,8 +83,18 @@ const resetGame = () => {
     // Your code to reset the game state
     // ...
 
+    cells = ['', '', '', '', '', '', '', '', ''];
+    currentPlayer = 'X';
+    result.textContent = '';
+
+
     // Your code to update the 'result' element
     // ...
+    btns.forEach((btn) => {
+        btn.textContent = '';
+        btn.disabled = false;
+    });
+
 
     // Your code to re-enable buttons
     // ...
