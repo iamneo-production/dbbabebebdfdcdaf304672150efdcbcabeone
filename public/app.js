@@ -17,6 +17,9 @@ let conditions = [
 // Function to handle player moves
 const ticTacToe = (element, index) => {
     // Your game logic here
+    //check if the clicked cell is already occupied
+    //or if the game is already won
+    if(cells[index]!=="|| result")
 
     /*
     **Part 1: Winning Conditions (Add your code here)**
